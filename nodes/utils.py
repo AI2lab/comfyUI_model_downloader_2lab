@@ -290,3 +290,9 @@ def execute_command(command, working_dir)->bool:
         print(f"Git command failed with error: {e.output.decode('utf-8').strip()}")
         return False
 
+
+
+def print_console(text):
+    print(f"\033[34m[INFO]\033[0m {text}")
+def print_error(text):
+    print(f"\033[31m[ERROR]\033[0m {text}")

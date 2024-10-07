@@ -20,7 +20,6 @@ if os.path.exists(model_file):
         for item in data:
             models[item['custom_node']] = item
 
-
 auto_download_model = False
 china_mirror = False
 
@@ -32,4 +31,3 @@ if os.path.exists(file_path):
     config.read(file_path)
     auto_download_model = config.get("download_models", "auto_download_model", fallback=False)
     china_mirror = config.get("download_models", "china_mirror", fallback=True)
-
