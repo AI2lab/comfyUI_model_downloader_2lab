@@ -3,11 +3,9 @@ import zipfile
 import subprocess
 import traceback
 import random
-import qrcode
 import requests
 from tqdm import tqdm
-from PIL import Image
-from .constants import project_root, models, custom_nodes_root, comfyUI_models_root, china_mirror
+from .constants import model_folder, models, custom_nodes_root, china_mirror
 import platform
 from torchvision.datasets.utils import download_url
 
@@ -73,9 +71,9 @@ def download_model(node):
                         save_path = save_path.replace('/','\\')
                         if save_path_2:
                             save_path_2 = save_path_2.replace('/','\\')
-                    save_full_path = os.path.join(comfyUI_models_root,save_path)
+                    save_full_path = os.path.join(model_folder,save_path)
                     if save_path_2:
-                        save_full_path_2 = os.path.join(comfyUI_models_root,save_path_2)
+                        save_full_path_2 = os.path.join(model_folder,save_path_2)
                     else:
                         save_full_path_2 = None
 

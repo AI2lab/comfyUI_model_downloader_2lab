@@ -22,6 +22,7 @@ if os.path.exists(model_file):
 
 auto_download_model = False
 china_mirror = False
+model_folder = comfyUI_models_root
 
 # read config from 2lab.ini
 file_path = os.path.join(project_root, "2lab.ini")
@@ -31,3 +32,5 @@ if os.path.exists(file_path):
     config.read(file_path)
     auto_download_model = config.get("download_models", "auto_download_model", fallback=False)
     china_mirror = config.get("download_models", "china_mirror", fallback=True)
+    model_folder = config.get("download_models", "model_folder", fallback=comfyUI_models_root)
+

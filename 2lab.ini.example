@@ -1,4 +1,5 @@
 [download_models]
 auto_download_model: true,
-china_mirror: true
+china_mirror: true,
+# model_folder: /user/xxx/comfyUI/models
 
